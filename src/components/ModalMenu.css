@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(to right, #B435FF, #D13FFD);
-    position: absolute;
+    position: fixed;
     z-index: 1200;
     top: 0;
     display: flex;
@@ -10,6 +10,7 @@
     align-items: center;
     justify-content:center;
     gap: 40px;
+    overflow:hidden;
 }
 
 .main-container-menu h1{
@@ -24,10 +25,11 @@
     background-color: white;
     font-size: 20px;
     padding: 1rem 2rem;
+    
 }
 
 .close-button-menu{
-    position: absolute;
+    position: fixed;
     z-index: 1400;
     right: 0;
     top:0;
