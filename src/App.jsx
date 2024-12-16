@@ -7,8 +7,11 @@ import ProductCard from './components/ProductCard'
 import TotalPrice from './components/TotalPrice'
 import ModalMenu from './components/ModalMenu'
 
-
 function App() {
+
+  const [searchQuery, setSearchQuery] = useState("");
+  console.log(searchQuery);
+  
   const [count, setCount] = useState(0)
   const [showModal, setShowModal] = useState(false); // Controla el modal
   // const [products, setProducts] = useState([]); // Guarda la lista de productos
@@ -38,7 +41,6 @@ function App() {
     }
     setShowModal(true);
   };
-
   //Cierra modal
   const handleCloseModal = () => setShowModal(false);
   const [showModalMenu, setShowModalMenu] = useState(false); // Controla el modal
@@ -55,13 +57,6 @@ function App() {
   const [footerInput, setFooterInput] = useState("");
 
   const handleFooterInputChange = (e) => setFooterInput(e.target.value);
-
-  // Agrega un nuevo producto
-  // const handleAddProduct = (product) => {
-  //   setProducts([...products, product]); // Añade producto a la lista
-  //   setShowModal(false); // Cierra el modal
-  //   setFooterInput("");
-  // };
 
   const handleAddProduct = (product) => {
     if (editProduct.price) {
